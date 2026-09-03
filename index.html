@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Ell's Portfolio</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+
+<button id="darkModeBtn">🌙 Dark Mode</button>
+
+<div class="hero">
+     <img id="profilePic" src="profile.jpg" alt="Ell's Profile Picture" class="profile-pic">
+
+    <div class="hero-text">
+     <h1>Hi! I'm Ell</h1>
+     <p> Web Developer | Technical Support Engineer | QA Tester </p>
+     <p id="welcomeText">Welcome to my personal portfolio website!</p>
+     
+      <button id="welcomeBtn">Say Hello 👋</button>
+
+</div>
+
+
+</div>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#experience">Work Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<h2>About Me</h2>
+<p>
+I'm a Technical Support Engineer and QA Software Tester who enjoys solving technical problems and learning new technologies. I'm currently building my skills in web development.
+</p>
+</section>
+
+<section id="experience">
+
+    <h2>Work Experience</h2>
+
+    <div class="experience-item">
+
+      <h3>Technical Support Engineer</h3>
+<p class="job-title">Digital Product Support Specialist / QA Tester</p>
+
+        <p class="experience-info">
+            <i class="fa-solid fa-building"></i> Duke Manufacturing |
+            <i class="fa-solid fa-location-dot"></i> Hybrid |
+            <i class="fa-solid fa-calendar"></i> September 2024 – Present
+        </p>
+
+        <ul>
+            <li>Provide technical support for cloud-connected commercial food service equipment and mobile applications.</li>
+            <li>Troubleshoot hardware, software, and connectivity issues for global customers.</li>
+            <li>Perform manual testing and QA testing to validate software functionality.</li>
+            <li>Create documentation, monitor cases, and support escalations.</li>
+        </ul>
+
+    </div>
+
+
+    <div class="experience-item">
+
+        <h3>IT Technician</h3>
+
+        <p class="experience-info">
+            <i class="fa-solid fa-building"></i> Hewlett Packard |
+            <i class="fa-solid fa-location-dot"></i> Onsite |
+            <i class="fa-solid fa-calendar"></i> February 2022 – December 2023
+        </p>
+
+        <ul>
+            <li>Provided technical support and troubleshooting for hardware and software issues.</li>
+            <li>Assisted users with IT-related concerns and system issues.</li>
+        </ul>
+
+    </div>
+
+
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p>Bachelor of Science in Industrial Engineering — Tarlac State University | 2014 – 2020</p>
+</section>
+
+<section id="projects">
+    <section id="github">
+    <h2>My GitHub Repositories</h2>
+
+    <div id="githubRepos">
+        <p>Loading repositories...</p>
+    </div>
+</section>
+    <h2>Projects</h2>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>🌐 Personal Portfolio Website</h3>
+
+            <p>
+                A responsive portfolio website built using HTML, CSS, and
+                JavaScript to showcase my experience, skills, and projects.
+            </p>
+
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+            <div class="project-buttons">
+                <a href="pdf/portfolio.pdf" target="_blank">View PDF</a>
+
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>🧪 QA Testing Documentation</h3>
+
+            <p>
+                Created and maintained test documentation, executed manual
+                testing, reported defects, and verified bug fixes to improve
+                software quality.
+            </p>
+
+            <p><strong>Technologies:</strong> QMetry, Jira</p>
+
+            <div class="project-buttons">
+                
+                <a href="pdf/qa-testing.pdf" target="_blank">View PDF</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <h3>🔧 Technical Support & Troubleshooting</h3>
+
+            <p>
+                Investigated software and hardware issues, performed root
+                cause analysis, and collaborated with development teams to
+                resolve customer-reported problems.
+            </p>
+
+            <p><strong>Technologies:</strong> SQL, Windows, Cloud Applications</p>
+
+            <div class="project-buttons">
+                
+                <a href="pdf/tech-support.pdf" target="_blank">View PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript (Learning)</div>
+        <div class="skill">QA Testing</div>
+        <div class="skill">Technical Support</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Jira</div>
+        <div class="skill">QMetry</div>
+        <div class="skill">Git & GitHub (Learning)</div>
+    </div>
+</section>
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        I'd love to connect with you! Feel free to reach out through any of the platforms below.
+    </p>
+
+    <div class="contact-container">
+    <a href="mailto:aleafar1122@email.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+    <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+</div>
+
+<h3>Send Me a Message</h3>
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email">
+
+        <textarea
+            id="message"
+            rows="5"
+            placeholder="Your Message"></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+        <p id="formMessage"></p>
+
+        </form>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
