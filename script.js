@@ -1,116 +1,184 @@
 console.log("JavaScript is connected!");
 
+// ===============================
+// Welcome Button
+// ===============================
+
 const button = document.getElementById("welcomeBtn");
 const text = document.getElementById("welcomeText");
 
-button.addEventListener("click", function () {
-    text.textContent = "👋 Thanks for stopping by! I'm currently learning JavaScript";
-});
+if (button && text) {
+    button.addEventListener("click", function () {
+        text.textContent =
+            "👋 Thanks for stopping by! I'm currently learning JavaScript";
+    });
+}
+
+
+// ===============================
+// Profile Image Modal
+// ===============================
+
 const image = document.getElementById("profilePic");
 const modal = document.getElementById("imageModal");
 const fullImage = document.getElementById("fullImage");
 const closeBtn = document.querySelector(".close");
 
-image.addEventListener("click", function () {
-    modal.style.display = "flex";
-    fullImage.src = image.src;
-});
+if (image && modal && fullImage && closeBtn) {
 
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
+    image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        fullImage.src = image.src;
+    });
 
-modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
+    closeBtn.addEventListener("click", function () {
         modal.style.display = "none";
-    }
-});
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        modal.style.display = "none";
-    }
-});
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
+}
+
+
+// ===============================
+// Dark Mode
+// ===============================
+
 const darkModeBtn = document.getElementById("darkModeBtn");
 
-darkModeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-});
+if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+    });
+}
+
+
+// ===============================
+// Section Animation
+// ===============================
+
 const hiddenElements = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver((entries) => {
+
     entries.forEach((entry) => {
+
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
+
     });
+
 });
 
 hiddenElements.forEach((el) => {
+
     el.classList.add("hidden");
     observer.observe(el);
+
 });
+
+
+// ===============================
 // Contact Form Validation
+// ===============================
+
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
 if (contactForm) {
+
     contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        if (name === "") {
-            formMessage.textContent = "❌ Please enter your name.";
+        if (name === "" || email === "" || message === "") {
+
+            event.preventDefault();
+
+            formMessage.textContent = "❌ Please complete all fields.";
             formMessage.style.color = "red";
-            return;
+
         }
 
-        if (email === "") {
-            formMessage.textContent = "❌ Please enter your email.";
-            formMessage.style.color = "red";
-            return;
-        }
-
-        if (message === "") {
-            formMessage.textContent = "❌ Please enter your message.";
-            formMessage.style.color = "red";
-            return;
-        }
-
-        formMessage.textContent = "✅ Message sent successfully!";
-        formMessage.style.color = "green";
-
-        contactForm.reset();
     });
+
 }
-// GitHub API
+const githubUsername = "alea0222";
+
 const githubRepos = document.getElementById("githubRepos");
 
-fetch("https://api.github.com/users/YOUR_GITHUB_USERNAME/repos")
-    .then(response => response.json())
-    .then(data => {
+if (githubRepos) {
 
-        githubRepos.innerHTML = "";
+    fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=10`)
+        .then(response => {
 
-        data.forEach(repo => {
+            if (!response.ok) {
+                throw new Error("GitHub API error");
+            }
 
-            const repoCard = document.createElement("div");
+            return response.json();
 
-            repoCard.innerHTML = `
-                <h3>${repo.name}</h3>
-                <p>${repo.description || "No description available."}</p>
-                <a href="${repo.html_url}" target="_blank">
-                    View Repository
-                </a>
-            `;
+        })
+        .then(repositories => {
 
-            githubRepos.appendChild(repoCard);
+            githubRepos.innerHTML = "";
+
+            if (repositories.length === 0) {
+
+                githubRepos.innerHTML =
+                    "<p>No public repositories found.</p>";
+
+                return;
+            }
+
+            repositories.forEach(repo => {
+
+                const repoCard = document.createElement("div");
+
+                repoCard.className = "github-repo";
+
+                repoCard.innerHTML = `
+                    <h3>${repo.name}</h3>
+
+                    <p>
+                        ${repo.description || "No description available."}
+                    </p>
+
+                    <p>
+                        ⭐ ${repo.stargazers_count}
+                        &nbsp; | &nbsp;
+                        🍴 ${repo.forks_count}
+                    </p>
+
+                    <a href="${repo.html_url}" target="_blank">
+                        View Repository →
+                    </a>
+                `;
+
+                githubRepos.appendChild(repoCard);
+
+            });
+
+        })
+        .catch(error => {
+
+            console.error("GitHub repositories error:", error);
+
+            githubRepos.innerHTML =
+                "<p>Unable to load GitHub repositories.</p>";
+
         });
 
-    })
-    .catch(error => {
-        githubRepos.innerHTML = "<p>Unable to load GitHub repositories.</p>";
-        console.log(error);
-    });
+}
