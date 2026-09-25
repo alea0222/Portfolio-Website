@@ -1,284 +1,840 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Ell's Portfolio</title>
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImage">
-</div>
-
-<button id="darkModeBtn">🌙 Dark Mode</button>
-
-<div class="hero">
-     <img id="profilePic" src="profile.jpg" alt="Ell's Profile Picture" class="profile-pic">
-
-    <div class="hero-text">
-     <h1>Hi! I'm Ell</h1>
-     <p> Web Developer | Technical Support Engineer | QA Tester </p>
-     <p id="welcomeText">Welcome to my personal portfolio website!</p>
-     
-      <button id="welcomeBtn">Say Hello 👋</button>
-
-</div>
-
-
-</div>
-
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#experience">Work Experience</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-<h2>About Me</h2>
-<p>
-I'm a Technical Support Engineer and QA Software Tester who enjoys solving technical problems and learning new technologies. I'm currently building my skills in web development.
-</p>
-</section>
-
-<section id="experience">
-
-    <h2>Work Experience</h2>
-
-    <div class="experience-item">
-
-      <h3>Technical Support Engineer</h3>
-<p class="job-title">Digital Product Support Specialist / QA Tester</p>
-
-        <p class="experience-info">
-            <i class="fa-solid fa-building"></i> Duke Manufacturing |
-            <i class="fa-solid fa-location-dot"></i> Hybrid |
-            <i class="fa-solid fa-calendar"></i> September 2024 – Present
-        </p>
-
-        <ul>
-            <li>Provide technical support for cloud-connected commercial food service equipment and mobile applications.</li>
-            <li>Troubleshoot hardware, software, and connectivity issues for global customers.</li>
-            <li>Perform manual testing and QA testing to validate software functionality.</li>
-            <li>Create documentation, monitor cases, and support escalations.</li>
-        </ul>
-
-    </div>
-
-
-    <div class="experience-item">
-
-        <h3>IT Technician</h3>
-
-        <p class="experience-info">
-            <i class="fa-solid fa-building"></i> Hewlett Packard |
-            <i class="fa-solid fa-location-dot"></i> Onsite |
-            <i class="fa-solid fa-calendar"></i> February 2022 – December 2023
-        </p>
-
-        <ul>
-            <li>Provided technical support and troubleshooting for hardware and software issues.</li>
-            <li>Assisted users with IT-related concerns and system issues.</li>
-        </ul>
-
-    </div>
-
-
-</section>
-
-<section id="education">
-<h2>Education</h2>
-<p>Bachelor of Science in Industrial Engineering — Tarlac State University | 2014 – 2020</p>
-</section>
-
-<section id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="project-container">
-
-        <!-- Project 1 -->
-        <div class="project-card">
-            <h3>🌐 Personal Portfolio Website</h3>
-
-            <p>
-                A responsive portfolio website built using HTML, CSS, and
-                JavaScript to showcase my experience, skills, and projects.
-            </p>
-
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-
-            <div class="project-buttons">
-                <a href="pdf/portfolio.pdf" target="_blank">View PDF</a>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <h3>🧪 QA Testing Documentation</h3>
-
-            <p>
-                Created and maintained test documentation, executed manual
-                testing, reported defects, and verified bug fixes to improve
-                software quality.
-            </p>
-
-            <p><strong>Technologies:</strong> QMetry, Jira</p>
-
-            <div class="project-buttons">
-                <a href="pdf/qa-testing.pdf" target="_blank">View PDF</a>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-            <h3>🔧 Technical Support & Troubleshooting</h3>
-
-            <p>
-                Investigated software and hardware issues, performed root
-                cause analysis, and collaborated with development teams to
-                resolve customer-reported problems.
-            </p>
-
-            <p><strong>Technologies:</strong> SQL, Windows, Cloud Applications</p>
-
-            <div class="project-buttons">
-                <a href="pdf/tech-support.pdf" target="_blank">View PDF</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="github">
-
-    <h2>My GitHub Repositories</h2>
-
-    <div id="githubRepos">
-        <p>Loading repositories...</p>
-    </div>
-
-</section>
-
-
-<section id="skills">
-
-    <h2>Skills</h2>
-
-    <div class="skills-container">
-
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript (Learning)</div>
-        <div class="skill">QA Testing</div>
-        <div class="skill">Technical Support</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Jira</div>
-        <div class="skill">QMetry</div>
-        <div class="skill">Git & GitHub (Learning)</div>
-
-    </div>
-
-</section>
-
-
-<section id="contact">
-
-    <h2>Contact Me</h2>
-
-    <p>
-        I'd love to connect with you! Feel free to reach out through any of the platforms below.
-    </p>
-
-    <div class="contact-container">
-
-        <a href="mailto:aleafar1122@gmail.com">
-            📧 Email
-        </a>
-
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank">
-            💼 LinkedIn
-        </a>
-
-        <a href="https://github.com/alea0222" target="_blank">
-    🐙 GitHub
-</a>
-    </div>
-
-
-    <h3>Send Me a Message</h3>
-
-   <form
-    id="contactForm"
-    action="https://formsubmit.co/aleafar1122@gmail.com"
-    method="POST"
->
-
-    <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Your Name"
-        required
-    >
-
-    <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Your Email"
-        required
-    >
-
-    <textarea
-        id="message"
-        name="message"
-        rows="5"
-        placeholder="Your Message"
-        required
-    ></textarea>
-
-    <input
-        type="hidden"
-        name="_subject"
-        value="New Portfolio Contact Message"
-    >
-
-    <input
-        type="hidden"
-        name="_template"
-        value="table"
-    >
-
-    <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-    >
-
-    <button type="submit">
-        Send Message
+    <!-- =========================
+         DARK MODE BUTTON
+    ========================== -->
+
+    <button id="darkModeBtn" class="dark-mode-btn">
+        🌙
     </button>
 
-</form>
 
-<p id="formMessage"></p>
+    <!-- =========================
+         PORTFOLIO CONTAINER
+    ========================== -->
 
-</section>
+    <div class="portfolio">
 
-<script src="script.js"></script>
+
+        <!-- =========================
+             TOP NAVIGATION
+        ========================== -->
+
+        <header class="top-header">
+
+            <div class="logo">
+                Ell.
+            </div>
+
+            <nav class="navigation">
+
+                <button class="tab-btn active"
+                        data-tab="home">
+                    Home
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="about">
+                    About
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="experience">
+                    Experience
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="education">
+                    Education
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="projects">
+                    Projects
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="github">
+                    GitHub
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="skills">
+                    Skills
+                </button>
+
+                <button class="tab-btn"
+                        data-tab="contact">
+                    Contact
+                </button>
+
+            </nav>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main-content">
+
+
+            <!-- =========================
+                 HOME TAB
+            ========================== -->
+
+            <section id="home"
+                     class="tab-content active">
+
+                <div class="home-container">
+
+
+                    <!-- LEFT SIDE -->
+
+                    <div class="home-text">
+
+                        <p class="welcome-label">
+                            Welcome to my portfolio
+                        </p>
+
+                        <h1>
+                            Hi! I'm <span>Ell</span>
+                        </h1>
+
+                        <h2>
+                            Web Developer
+                            <br>
+                            Technical Support Engineer
+                            <br>
+                            QA Tester
+                        </h2>
+
+                        <p class="home-description">
+                            I enjoy solving technical problems,
+                            testing software, and building responsive
+                            websites while continuously learning
+                            new technologies.
+                        </p>
+
+
+                        <div class="home-buttons">
+
+                            <button id="welcomeBtn"
+                                    class="primary-btn">
+                                Say Hello 👋
+                            </button>
+
+                            <button class="secondary-btn"
+                                    data-tab-link="projects">
+                                View My Work
+                            </button>
+
+                        </div>
+
+                        <p id="welcomeText"
+                           class="welcome-message">
+                            Welcome to my personal portfolio website!
+                        </p>
+
+                    </div>
+
+
+                    <!-- RIGHT SIDE -->
+
+                    <div class="home-image">
+
+                        <div class="image-decoration"></div>
+
+                        <img id="profilePic"
+                             src="profile.jpg"
+                             alt="Ell's Profile Picture"
+                             class="profile-pic">
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOME SERVICES -->
+
+                <div class="home-services">
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Building responsive websites using
+                            HTML, CSS and JavaScript.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            🎧
+                        </div>
+
+                        <h3>
+                            Technical Support
+                        </h3>
+
+                        <p>
+                            Troubleshooting software, hardware
+                            and connectivity issues.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            QA Testing
+                        </h3>
+
+                        <p>
+                            Testing software functionality
+                            and documenting defects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ABOUT TAB
+            ========================== -->
+
+            <section id="about"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        GET TO KNOW ME
+                    </p>
+
+                    <h2>
+                        About Me
+                    </h2>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="about-icon">
+                        👩‍💻
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Technical Support Engineer & QA Tester
+                        </h3>
+
+                        <p>
+                            I'm a Technical Support Engineer and
+                            QA Software Tester who enjoys solving
+                            technical problems and learning new
+                            technologies.
+                        </p>
+
+                        <p>
+                            I have experience troubleshooting
+                            hardware, software, connectivity
+                            problems, and cloud-connected
+                            applications.
+                        </p>
+
+                        <p>
+                            I'm currently building my skills in
+                            web development, particularly HTML,
+                            CSS and JavaScript.
+                        </p>
+
+                        <p>
+                            My goal is to continue growing my
+                            technical skills while creating
+                            useful and user-friendly digital
+                            experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 EXPERIENCE TAB
+            ========================== -->
+
+            <section id="experience"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        MY CAREER
+                    </p>
+
+                    <h2>
+                        Work Experience
+                    </h2>
+
+                </div>
+
+
+                <!-- JOB 1 -->
+
+                <div class="experience-card">
+
+                    <div class="experience-number">
+                        01
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3>
+                            Technical Support Engineer
+                        </h3>
+
+                        <h4>
+                            Digital Product Support Specialist /
+                            QA Tester
+                        </h4>
+
+                        <p class="job-info">
+                            Duke Manufacturing
+                            &nbsp; | &nbsp;
+                            Hybrid
+                            &nbsp; | &nbsp;
+                            September 2024 – Present
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Provide technical support for
+                                cloud-connected commercial food
+                                service equipment and mobile
+                                applications.
+                            </li>
+
+                            <li>
+                                Troubleshoot hardware, software,
+                                and connectivity issues for
+                                global customers.
+                            </li>
+
+                            <li>
+                                Perform manual testing and QA
+                                testing to validate software
+                                functionality.
+                            </li>
+
+                            <li>
+                                Create documentation, monitor
+                                cases, and support escalations.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JOB 2 -->
+
+                <div class="experience-card">
+
+                    <div class="experience-number">
+                        02
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3>
+                            IT Technician
+                        </h3>
+
+                        <p class="job-info">
+                            Hewlett Packard
+                            &nbsp; | &nbsp;
+                            Onsite
+                            &nbsp; | &nbsp;
+                            February 2022 – December 2023
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Provided technical support and
+                                troubleshooting for hardware
+                                and software issues.
+                            </li>
+
+                            <li>
+                                Assisted users with IT-related
+                                concerns and system issues.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 EDUCATION TAB
+            ========================== -->
+
+            <section id="education"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        MY BACKGROUND
+                    </p>
+
+                    <h2>
+                        Education
+                    </h2>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Bachelor of Science in
+                            Industrial Engineering
+                        </h3>
+
+                        <p>
+                            Tarlac State University
+                        </p>
+
+                        <span>
+                            2014 – 2020
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PROJECTS TAB
+            ========================== -->
+
+            <section id="projects"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        MY WORK
+                    </p>
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                </div>
+
+
+                <div class="project-container">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            🌐
+                        </div>
+
+                        <h3>
+                            Personal Portfolio Website
+                        </h3>
+
+                        <p>
+                            A responsive portfolio website built
+                            using HTML, CSS, and JavaScript to
+                            showcase my experience, skills,
+                            and projects.
+                        </p>
+
+                        <p class="technology">
+                            <strong>
+                                Technologies:
+                            </strong>
+
+                            HTML, CSS, JavaScript
+                        </p>
+
+                        <a href="pdf/portfolio.pdf"
+                           target="_blank">
+                            View PDF →
+                        </a>
+
+                    </div>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            🧪
+                        </div>
+
+                        <h3>
+                            QA Testing Documentation
+                        </h3>
+
+                        <p>
+                            Created and maintained test
+                            documentation, executed manual
+                            testing, reported defects, and
+                            verified bug fixes to improve
+                            software quality.
+                        </p>
+
+                        <p class="technology">
+                            <strong>
+                                Technologies:
+                            </strong>
+
+                            QMetry, Jira
+                        </p>
+
+                        <a href="pdf/qa-testing.pdf"
+                           target="_blank">
+                            View PDF →
+                        </a>
+
+                    </div>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <div class="project-card">
+
+                        <div class="project-icon">
+                            🔧
+                        </div>
+
+                        <h3>
+                            Technical Support &
+                            Troubleshooting
+                        </h3>
+
+                        <p>
+                            Investigated software and hardware
+                            issues, performed root cause analysis,
+                            and collaborated with development
+                            teams to resolve customer-reported
+                            problems.
+                        </p>
+
+                        <p class="technology">
+                            <strong>
+                                Technologies:
+                            </strong>
+
+                            SQL, Windows, Cloud Applications
+                        </p>
+
+                        <a href="pdf/tech-support.pdf"
+                           target="_blank">
+                            View PDF →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 GITHUB TAB
+            ========================== -->
+
+            <section id="github"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        MY CODE
+                    </p>
+
+                    <h2>
+                        GitHub Repositories
+                    </h2>
+
+                </div>
+
+
+                <div id="githubRepos">
+
+                    <p class="loading">
+                        Loading repositories...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SKILLS TAB
+            ========================== -->
+
+            <section id="skills"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        WHAT I KNOW
+                    </p>
+
+                    <h2>
+                        Skills
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-container">
+
+                    <div class="skill">
+                        HTML
+                    </div>
+
+                    <div class="skill">
+                        CSS
+                    </div>
+
+                    <div class="skill">
+                        JavaScript
+                        <small>
+                            Learning
+                        </small>
+                    </div>
+
+                    <div class="skill">
+                        QA Testing
+                    </div>
+
+                    <div class="skill">
+                        Technical Support
+                    </div>
+
+                    <div class="skill">
+                        SQL
+                    </div>
+
+                    <div class="skill">
+                        Jira
+                    </div>
+
+                    <div class="skill">
+                        QMetry
+                    </div>
+
+                    <div class="skill">
+                        Git & GitHub
+                        <small>
+                            Learning
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CONTACT TAB
+            ========================== -->
+
+            <section id="contact"
+                     class="tab-content">
+
+                <div class="section-header">
+
+                    <p>
+                        LET'S CONNECT
+                    </p>
+
+                    <h2>
+                        Contact Me
+                    </h2>
+
+                </div>
+
+
+                <p class="contact-intro">
+                    I'd love to connect with you!
+                    Feel free to reach out through any
+                    of the platforms below.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:aleafar1122@gmail.com">
+                        📧 Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/yourusername"
+                       target="_blank">
+                        💼 LinkedIn
+                    </a>
+
+                    <a href="https://github.com/alea0222"
+                       target="_blank">
+                        🐙 GitHub
+                    </a>
+
+                </div>
+
+
+                <h3 class="message-title">
+                    Send Me a Message
+                </h3>
+
+
+                <form id="contactForm"
+                      action="https://formsubmit.co/aleafar1122@gmail.com"
+                      method="POST">
+
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Your Name"
+                           required>
+
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Your Email"
+                           required>
+
+
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              placeholder="Your Message"
+                              required></textarea>
+
+
+                    <input type="hidden"
+                           name="_subject"
+                           value="New Portfolio Contact Message">
+
+
+                    <input type="hidden"
+                           name="_template"
+                           value="table">
+
+
+                    <input type="hidden"
+                           name="_captcha"
+                           value="false">
+
+
+                    <button type="submit">
+                        Send Message →
+                    </button>
+
+                </form>
+
+
+                <p id="formMessage"></p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         PROFILE IMAGE MODAL
+    ========================== -->
+
+    <div id="imageModal"
+         class="modal">
+
+        <span class="close">
+            &times;
+        </span>
+
+        <img id="fullImage"
+             class="modal-content"
+             alt="Enlarged profile picture">
+
+    </div>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
